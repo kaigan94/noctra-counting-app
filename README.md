@@ -38,4 +38,4 @@ HTML5
 ## 🚀 Live Demo
 
 **This app is live on Netlify:**
-🔗 https://flowtracker.netlify.app
+🔗 https://flowtracker-counting.netlify.app
