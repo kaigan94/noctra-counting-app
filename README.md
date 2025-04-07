@@ -1,4 +1,4 @@
-# 🧮 FlowTracker – Counting App
+# 🧮 FlowTracker – A Counting App
 
 FlowTracker is a stylish, animated web app designed for tracking entries, people, or events. It includes full functionality for saving counts, managing totals, and exporting your data – all wrapped in a fantasy-inspired, responsive interface.
 
