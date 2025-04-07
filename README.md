@@ -1,40 +1,41 @@
-# 👥 People Counter
+# 🧮 FlowTracker – Counting App
 
-A simple yet stylish web app built with **HTML, CSS, and JavaScript** to count people at events, stores, or gatherings.
+FlowTracker is a stylish, animated web app designed for tracking entries, people, or events. It includes full functionality for saving counts, managing totals, and exporting your data – all wrapped in a fantasy-inspired, responsive interface.
 
-## 🎯 Features
+---
 
-- ➕ Increment the number of people
-- 💾 Save the current count to a history log
-- 🧼 Reset both the current count and saved history
-- ✅ Confirmation dialog before resetting
-- 🌄 Background image for atmosphere (e.g. darkcastle.jpg)
-- 📱 Fully responsive and mobile-friendly
+## ✨ Features
 
-## 🛠️ Technologies
+- 🔢 **Count entries** – Add or subtract with one click
+- 💾 **Save entries** – Track previous counts with history
+- 📊 **Total summary** – See your ongoing total update live
+- 🗑️ **Remove one** – Subtract from total without resetting
+- ❌ **Reset all** – Clear the counter and history
+- 📤 **Export as .TXT** – Download your saved data with timestamp
+- 🧙‍♂️ **Animated UI** – Glowing effects, tooltip banners, custom fonts & icons
+- 📱 **Responsive** – Fully optimized for both desktop and mobile devices
 
-- HTML
-- CSS (including `background-image`, `box-shadow`, `media queries`)
+---
+
+## 🛠️ Tech Stack
+
+HTML5
+
+- CSS3 (custom styles + media queries)
+
 - Vanilla JavaScript
-- DOM manipulation (`getElementById`, `textContent`)
-- Simple app logic with clear function structure
 
-## 💡 What I Learned
+- Bootstrap Icons
 
-- How to manipulate DOM elements and update UI in real-time
-- Using `textContent`, `+=`, and `confirm()` dialogs
-- Creating a responsive, user-friendly interface
-- Structuring JavaScript into small, clear functions (`increment`, `save`, `reset`)
+---
+
+## 🖼️ Preview
+
+```html
+![Counting App Screenshot](./images/preview.png)
+```
 
 ## 🚀 Live Demo
 
-👉 [Check out the live app on Netlify](https://grand-semolina-c8ad1d.netlify.app)
-
-## 📁 Source Code
-
-👉 [GitHub Repository](https://github.com/kaigan94/people-counter)
-
-## 🧙‍♂️ Screenshot
-
-![Screenshot](./screenshot.png)  
-> *The background, styling, and layout are designed to feel like a magical tool in a fantasy world.*
+**This app is live on Netlify:**
+🔗 https://flowtracker.netlify.app

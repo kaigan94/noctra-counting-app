@@ -68,16 +68,19 @@ p {
   right: 0;
   transform: translate(26.4%, -26.4%) rotate(90deg);
 }
+
 .top-left-icon {
   top: 0;
   left: 0;
   transform: translate(-26.4%, -26.4%) rotate(360deg);
 }
+
 .bottom-right-icon {
   bottom: 0;
   right: 0;
   transform: translate(26.4%, 26.4%) rotate(180deg);
 }
+
 .bottom-left-icon {
   bottom: 0;
   left: 0;
@@ -150,6 +153,15 @@ button:hover {
   transform: scale(1.03);
 }
 
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  justify-content: center;
+  flex-wrap: wrap; /* bra för mobilanpassning */
+  margin-top: 16px;
+}
+
 /* ====================
    🎨 KNAPPAR
 ==================== */
@@ -203,7 +215,7 @@ button:hover {
 #reset-btn,
 #export-btn {
   position: absolute;
-  top: 14px;
+  top: 5px;
   background: none;
   padding: 0;
   border: none;
@@ -213,11 +225,11 @@ button:hover {
 }
 
 #reset-btn {
-  right: 40px;
+  right: 42px;
 }
 
 #export-btn {
-  left: 41px;
+  left: 42px;
 }
 
 #reset-btn img,
@@ -421,6 +433,17 @@ button:hover {
     text-transform: uppercase;
     letter-spacing: 0.5px;
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .button-row button {
+    width: 100%; /* eller 90% om du vill ha lite luft på sidorna */
+    max-width: 250px;
   }
 }
 
