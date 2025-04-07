@@ -14,7 +14,7 @@ html {
 
 body {
   cursor: url("images/purple-dagger.cur"), auto;
-  background-image: url("/images/runes.png");
+  background-image: url("/images/runes_optimized.webp");
   background-size: cover;
   text-align: center;
   min-height: 100vh;
@@ -406,12 +406,49 @@ button:hover {
 /* ====================
    📱 MOBILANPASSADE STILAR
 ==================== */
-@media (max-width: 600px) {
+@media (max-width: 480px) {
+  body {
+    padding: 0 14px;
+  }
+
+  .button-row {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  #increment-btn,
+  #save-btn,
+  #decrement-btn {
+    width: 58%;
+    max-width: 58%;
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  #total-wrapper {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .corner-icon {
+    width: 60px;
+  }
+
   h1 {
     font-size: clamp(1.5rem, 5vw, 1.5rem);
     letter-spacing: 2px;
     line-height: 1.8;
     padding-top: 20px;
+  }
+
+  h2#count-el {
+    font-size: (2.4rem);
   }
 
   #export-btn img,
@@ -435,14 +472,8 @@ button:hover {
     box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
   }
 
-  .button-row {
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-  }
-
   .button-row button {
-    width: 100%; /* eller 90% om du vill ha lite luft på sidorna */
+    width: 100%;
     max-width: 250px;
   }
 }
