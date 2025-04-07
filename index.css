@@ -2,8 +2,8 @@
    🌑 GLOBALA INSTÄLLNINGAR
 ==================== */
 @font-face {
-  font-family: "MagicRunes"; /* Namnet du använder i CSS */
-  src: url("fonts/DungeonDepths-owJWV.ttf") format("truetype");
+  font-family: "MagicRunes";
+  src: url("fonts/DragonHunter-9Ynxj.otf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -17,8 +17,13 @@ body {
   background-image: url("/images/runes.png");
   background-size: cover;
   text-align: center;
-  height: 100vh;
+  min-height: 100vh;
   perspective: 800px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8px;
 }
 
 body,
@@ -27,24 +32,30 @@ p {
 }
 
 /* ====================
-   🫙 LAYOUT & CONTAINERS
+   📦 LAYOUT & CONTAINERS
 ==================== */
 .container {
+  max-width: 800px;
   width: 100%;
+  margin: 0 auto;
   background: rgba(23, 19, 34, 0.6);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(10px);
   border: 2px solid rgba(100, 130, 255, 0.35);
   border-radius: 12px;
-  padding: 32px;
+  padding: 16px 12px 32px;
   color: #dcd3f8;
   box-shadow: 0 0 10px rgba(100, 130, 255, 0.5), inset 0 0 15px rgba(100, 130, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.8);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
 }
 
-/* 🌀 Basstil för alla hörnikoner */
 .corner-icon {
   position: absolute;
-  width: 100px; /* Justera storlek vid behov */
+  width: 100px;
   height: auto;
   pointer-events: none;
   z-index: 20;
@@ -52,48 +63,49 @@ p {
   opacity: 0.9;
 }
 
-/* 🎯 Specifika placeringar */
 .top-right-icon {
   top: 0;
   right: 0;
-  transform: translate(30%, -30%);
-  transform: rotate(90deg);
+  transform: translate(26.4%, -26.4%) rotate(90deg);
 }
-
 .top-left-icon {
   top: 0;
   left: 0;
-  transform: translate(-30%, -30%);
-  transform: rotate(360deg);
+  transform: translate(-26.4%, -26.4%) rotate(360deg);
 }
-
 .bottom-right-icon {
   bottom: 0;
   right: 0;
-  transform: translate(30%, 30%);
-  transform: rotate(180deg);
+  transform: translate(26.4%, 26.4%) rotate(180deg);
 }
-
 .bottom-left-icon {
   bottom: 0;
   left: 0;
-  transform: translate(-30%, 30%);
-  transform: rotate(270deg);
+  transform: translate(-26.4%, 26.4%) rotate(270deg);
 }
 
 /* ====================
-   📎 RUBRIKER & TEXTER
+   📌 RUBRIKER & TEXTER
 ==================== */
 h1 {
   font-family: "MagicRunes", serif;
-  font-size: 1.8rem;
-  color: #dcd3f8; /* Mörkare vitt med lila ton */
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
+  color: #dcd3f8;
   letter-spacing: 2px;
-  text-align: center;
-
-  /* 🔮 Mörkare glow med animation */
-  text-shadow: 0 0 12px #6b21a8, 0 0 12px #5b179d;
+  text-shadow: 0 0 16px #6b21a8, 0 0 16px #5b179d;
   animation: subtleGlow 3.5s ease-in-out infinite;
+  padding: 0 4px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(2rem, 5vw, 1.2rem);
+  margin-bottom: 16px;
+  color: #dcd3f8;
+  letter-spacing: 1px;
+  text-shadow: 0 0 16px #6b21a8, 0 0 16px #5b179d;
 }
 
 #save-el,
@@ -103,13 +115,21 @@ h1 {
   color: #dcd3f8;
 }
 
-#total-el {
-  margin: 0;
-  padding-bottom: 12px;
+#save-el {
+  font-size: 1.1rem;
+  margin: 10px 0 0;
+  padding-bottom: 8px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-family: "Crimson Pro", serif;
+  gap: 8px;
+}
+
+#total-el {
+  margin: 0;
+  padding-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 1.2rem;
 }
 
@@ -121,28 +141,29 @@ button {
   letter-spacing: 1px;
   text-transform: uppercase;
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  background: none;
+  border: none;
 }
 
 button:hover {
   box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-  transform: scale(1.02);
+  transform: scale(1.03);
 }
 
 /* ====================
-   🎨 KNAPPAR – UNIKA STILAR
+   🎨 KNAPPAR
 ==================== */
 #increment-btn,
 #save-btn,
 #decrement-btn {
-  font-family: "Rosarivo", serif;
+  font-family: "Crimson Pro", serif;
   border: 2px solid #dcd3f8;
-  color: white;
-  padding: 10px 20px;
+  color: #dcd3f8;
+  padding: 10px 22px;
   border-radius: 8px;
   text-shadow: 0 0 5px #dcd3f8;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  width: 160px;
+  width: 165px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +181,7 @@ button:hover {
 }
 
 #save-btn {
-  background: linear-gradient(to right, #165c2c, #1c7947);
+  background: linear-gradient(to right, #135227, #1c7947);
   box-shadow: 0 0 12px #1c7947;
 }
 
@@ -179,39 +200,63 @@ button:hover {
   box-shadow: 0 0 10px violet;
 }
 
-#reset-btn {
+#reset-btn,
+#export-btn {
+  position: absolute;
+  top: 14px;
   background: none;
-  border: none;
-  box-shadow: none;
-  cursor: pointer;
   padding: 0;
-  margin-bottom: 6%;
+  border: none;
+  cursor: pointer;
+  z-index: 25;
+  box-shadow: none;
 }
 
-.reset-icon {
-  stroke: #860111;
-  transition: transform 0.3s ease, stroke 0.3s ease;
-  width: 34px;
-  height: 34px;
+#reset-btn {
+  right: 40px;
 }
 
-#reset-btn:hover .reset-icon {
-  transform: scale(1.2);
-  stroke: orangered;
+#export-btn {
+  left: 41px;
+}
+
+#reset-btn img,
+#export-btn img {
+  width: 14px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+#reset-btn img {
+  filter: drop-shadow(0 0 1px crimson);
+}
+
+#export-btn img {
+  filter: drop-shadow(0 0 1px #3ca9e3);
+}
+
+#reset-btn img:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 2px crimson);
+}
+
+#export-btn img:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 2px #3ca9e3);
 }
 
 #remove-total-btn {
   font-family: "Crimson Pro", serif;
   background: linear-gradient(to right, #722f10, #944b00);
   border: 2px solid #dcd3f8;
-  color: white;
-  padding: 4px 14px;
+  color: #dcd3f8;
+  padding: 4px 10px;
   border-radius: 6px;
   box-shadow: 0 0 12px #944b00;
   text-shadow: 0 0 5px #dcd3f8;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 #remove-total-btn:hover {
@@ -220,189 +265,9 @@ button:hover {
   box-shadow: 0 0 10px orange;
 }
 
-#last-updated {
-  font-family: "Crimson Pro", serif;
-  font-size: 0.9rem;
-  color: #dcd3f8;
-  text-shadow: 0 0 0 black;
-  margin-top: 12px;
-  margin-bottom: auto;
-}
-
 /* ====================
-   🛠️ TOTAL-SEKTION
+   🛠️ EFFEKTER & ANIMATIONER
 ==================== */
-#total-wrapper {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  gap: 14px;
-  padding: 10px 10px;
-  margin: 10px 10px;
-  background: rgba(0, 0, 0, 0.05);
-  border-radius: 8px;
-  max-width: fit-content;
-}
-
-/* ====================
-   💥 ANIMATIONER
-==================== */
-@keyframes glow {
-  0% {
-    text-shadow: 0 0 5px gold;
-  }
-  100% {
-    text-shadow: none;
-  }
-}
-
-@keyframes subtleGlow {
-  0% {
-    text-shadow: 0 0 4px #6b21a8, 0 0 8px #5b179d;
-  }
-  50% {
-    text-shadow: 0 0 6px #4c1d95, 0 0 12px #3b0a68;
-  }
-  100% {
-    text-shadow: 0 0 4px #6b21a8, 0 0 8px #5b179d;
-  }
-}
-
-#total-value.animate-glow {
-  animation: glow 0.5s ease-in-out;
-}
-
-@keyframes slideOutRight {
-  0% {
-    transform: rotateY(-90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: rotateY(0deg);
-    opacity: 1;
-  }
-}
-
-@keyframes slideOutMobile {
-  0% {
-    transform: translateX(-50%) rotateX(-90deg);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(-50%) rotateX(0deg);
-    opacity: 1;
-  }
-}
-
-/* ====================
-   📱 MOBILANPASSNING
-==================== */
-@media screen and (max-width: 768px) {
-  body {
-    font-size: 1rem;
-  }
-
-  @media screen and (max-width: 768px) {
-    h1 {
-      font-size: 1rem;
-      letter-spacing: 1px;
-      line-height: 3rem;
-      padding: 0 10px; /* lite sidomarginal om texten går ända ut */
-    }
-  }
-
-  .button-row {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  button {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-
-  #reset-btn {
-    width: auto;
-    font-size: 1rem;
-    padding: 1px;
-    margin-top: -20px;
-  }
-
-  .tooltip-banner {
-    top: 130%; /* Lägg den under ikonen */
-    left: 50%;
-    transform: translateX(-50%) scale(0.9);
-    padding: 8px 14px;
-    text-align: center;
-    max-width: 200px;
-    white-space: normal; /* Tillåt radbrytning vid behov */
-  }
-
-  .tooltip-wrapper:hover .tooltip-banner {
-    animation: none;
-    opacity: 1;
-    transform: translateX(-50%) scale(1);
-  }
-
-  #total-wrapper {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    padding-left: 12%;
-    padding-right: 12%;
-  }
-
-  #remove-total-btn {
-    width: 100%;
-    text-align: center;
-    font-family: "Crimson Pro", serif;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
-  }
-}
-
-#total-wrapper {
-  flex-direction: column;
-  align-items: center;
-  gap: 6px;
-}
-
-.tooltip-banner {
-  top: 120%;
-  left: 50%;
-  transform: translateX(-50%) rotateX(-90deg);
-  transform-origin: top center;
-  padding: 8px 14px;
-  font-size: 0.9rem;
-  white-space: normal;
-  max-width: 200px;
-  text-align: center;
-}
-
-.tooltip-wrapper:hover .tooltip-banner {
-  animation: slideOutMobile 0.4s ease forwards;
-}
-
-/* ====================
-   🔧 JUSTERINGAR – LAYOUT & STORLEKAR
-==================== */
-.count-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.button-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 8px;
-  margin: 20px auto;
-  flex-wrap: wrap;
-}
-
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
@@ -411,18 +276,14 @@ button:hover {
 
 .tooltip-banner {
   position: absolute;
-  top: -30%;
-  left: 132%;
-  transform: translateY(-20%) rotateY(-90deg);
-  transform-origin: left center;
   background: #1c1c1c;
   color: #dcd3f8;
-  padding: 8px 8px;
+  padding: 6px 12px;
   border: 1px solid #aaa;
   border-radius: 6px;
-  font-family: "Rosarivo", serif;
+  font-family: "Crimson Pro", serif;
   font-size: 0.8rem;
-  letter-spacing: 1.2px;
+  letter-spacing: 1px;
   white-space: nowrap;
   opacity: 0;
   pointer-events: none;
@@ -431,19 +292,144 @@ button:hover {
 }
 
 .tooltip-wrapper:hover .tooltip-banner {
-  animation: slideOutRight 0.6s ease forwards;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
 }
 
-#count-el {
+.tooltip-banner.left {
+  padding: 2px 6px;
+  top: 50%;
+  left: auto;
+  right: 190%;
+  transform: translateY(-50%);
+  transform-origin: right center;
+}
+
+.tooltip-banner.right {
+  padding: 2px 6px;
+  top: 50%;
+  left: 190%;
+  right: auto;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+.tooltip-banner.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #1c1c1c;
+}
+
+.tooltip-banner.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #1c1c1c;
+}
+
+/* Glow effekt för Save button */
+.btn-glow {
+  box-shadow: 0 0 20px lime !important;
+  transform: scale(1.05);
+}
+
+@keyframes blinkOut {
+  0% {
+    color: red;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    color: #dcd3f8;
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    color: red;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.blink-total {
+  animation: blinkOut 0.4s ease-in-out;
+}
+
+.label-mobile {
+  display: none;
+}
+
+/* ====================
+   🧩 LAST UPDATED & TIDSTÄMPEL
+==================== */
+#last-updated {
   font-family: "Crimson Pro", serif;
-  font-size: 2.2rem;
-  margin: 12px;
+  font-size: 0.9rem;
+  color: #dcd3f8;
+  text-shadow: 0 0 0 black;
+  margin-top: 40px;
+  margin-bottom: -24px;
 }
 
-#increment-btn i,
-#save-btn i,
-#decrement-btn i {
-  font-size: 1rem;
-  vertical-align: middle;
-  padding: 0px;
+#total-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 8px;
+  margin: 0 auto;
+  max-width: fit-content;
+  flex-direction: column;
+}
+
+/* ====================
+   📱 MOBILANPASSADE STILAR
+==================== */
+@media (max-width: 600px) {
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 1.5rem);
+    letter-spacing: 2px;
+    line-height: 1.8;
+    padding-top: 20px;
+  }
+
+  #export-btn img,
+  #reset-btn img,
+  #export-btn .tooltip-banner,
+  #reset-btn .tooltip-banner {
+    display: none;
+  }
+
+  .label-mobile {
+    font-family: "Crimson Pro", serif;
+    font-size: 0.65rem;
+    color: #dcd3f8;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-top: 4px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+  }
+}
+
+/* ====================
+   📝 FOOTER COPYRIGHT
+==================== */
+#footer-copy {
+  position: fixed;
+  bottom: 6px;
+  left: 0;
+  right: 0;
 }
