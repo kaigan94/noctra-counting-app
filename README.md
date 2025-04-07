@@ -32,7 +32,7 @@ HTML5
 ## 🖼️ Preview
 
 ```html
-![Counting App Screenshot](./images/preview.png)
+![Counting App Screenshot](/images/preview.png)
 ```
 
 ## 🚀 Live Demo
