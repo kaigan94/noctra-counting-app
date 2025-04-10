@@ -1,0 +1,204 @@
+/* ==================================================
+   📱 RESPONSIVE – MOBILANPASSNING (≤768px)
+   Justeringar för små skärmar & touchanvändning
+================================================== */
+
+@media (max-width: 768px) {
+  /* 📱 Body & bakgrund */
+  body {
+    background-image: url("/images/noctra-mobile-bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #0a0918;
+    overflow-x: hidden;
+  }
+
+  /* 🌌 Hero-sektionen */
+  .hero-title {
+    font-size: 2.7rem;
+    padding: auto;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    padding-top: 0.5rem;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-spacer {
+    display: none;
+  }
+
+  /* 📦 Huvudcontainer */
+  .container {
+    margin-top: 0.5rem;
+    padding: 1rem 0.5rem 2rem;
+    width: 96%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    top: 0;
+  }
+
+  /* 🔘 Knapprad */
+  .button-row {
+    flex-direction: column;
+    gap: 14px;
+    width: 100%;
+    padding: auto;
+  }
+
+  .button-row button,
+  #increment-btn,
+  #save-btn,
+  #decrement-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 1.05rem;
+  }
+
+  /* 📊 Total-display */
+  #total-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 🧙 Hero fallback */
+  h1 {
+    font-size: 2rem;
+    padding: auto;
+  }
+
+  h2#count-el {
+    font-size: 3.5rem;
+    color: #dcd3f8;
+    text-shadow: 0 0 12px #b39dfc;
+    margin-bottom: 1.2rem;
+  }
+
+  #last-updated {
+    font-size: 0.9rem;
+    margin-bottom: -1.4rem;
+  }
+
+  /* 🧿 Döljer dekor och tooltip på mobil */
+  .corner-icon,
+  #export-btn img,
+  #reset-btn img,
+  #export-btn .tooltip-banner,
+  #reset-btn .tooltip-banner {
+    display: none;
+  }
+
+  /* 🏷️ Mobil-etiketter */
+  .label-mobile {
+    font-family: "Crimson Pro", serif;
+    font-size: 0.72rem;
+    color: #dcd3f8;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-top: auto;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: px;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+  }
+
+  .count-wrapper {
+    margin: auto;
+  }
+
+  /* 🧾 Entry-listan */
+  #entries-list {
+    font-size: 1.7rem;
+    word-break: break-word;
+  }
+}
+
+/* ==================================================
+   🔠 ENTRY-SEKTIONER – även utanför media query
+================================================== */
+
+#save-el {
+  width: 100%;
+  text-align: center;
+}
+
+#entries-list {
+  font-size: 1.6rem;
+  word-break: break-word;
+  margin-bottom: 1rem;
+  color: #e4d6ff;
+}
+
+#save-title {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  color: #dcd3f8;
+  text-shadow: 0 0 6px #7f5ae0;
+}
+
+#save-title i {
+  font-size: 1.4rem;
+  color: #b99eff;
+}
+
+/* 🗂️ Entries container */
+.entries-section {
+  width: 100%;
+  padding: 1rem;
+  margin-top: 1.2rem;
+  background: rgba(10, 8, 25, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(90, 70, 255, 0.2);
+}
+
+.entries-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #dcd3f8;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 6px #b39dfc;
+}
+
+.entries-header i {
+  font-size: 1.4rem;
+  color: #dcd3f8;
+}
+
+.entries-list {
+  font-size: 1.4rem;
+  color: #e0d6ff;
+  text-align: center;
+  word-break: break-word;
+  line-height: 2;
+  text-shadow: 0 0 6px rgba(255, 255, 255, 0.1);
+}
+
+/* 📝 Footer */
+#footer-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+  color: #7e70b5;
+}

@@ -1,0 +1,200 @@
+/* ==================================================
+   🛠️ EFFEKTER & ANIMATIONER
+   Tooltips, glow-effekter, fade-ins och nyckelrörelser
+================================================== */
+
+/* ==========================
+   🎯 TOOLTIP – Knappinfo
+========================== */
+
+.tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0.7rem;
+  background-color: #1a1a2e;
+  color: #dcd3f8;
+  text-shadow: 0 0 2px black;
+  border: 1px solid #555;
+  border-radius: 4px;
+  padding: 4px 6px;
+  position: absolute;
+  z-index: 10;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+button:disabled:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* 🧊 TOOLTIP WRAPPER & BANNERS */
+.tooltip-wrapper {
+  position: relative;
+  display: inline-block;
+  transform-style: preserve-3d;
+}
+
+.tooltip-banner {
+  position: absolute;
+  background: linear-gradient(to right, #37415f, #2a324d);
+  color: #dcd3f8;
+  padding: 6px 12px;
+  border: 1px solid #8da6ff;
+  border-radius: 6px;
+  font-family: "Crimson Pro", serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  box-shadow: 0 0 8px #8da6ff;
+  z-index: 10;
+  transition: all 0.4s ease-in-out;
+}
+
+.tooltip-wrapper:hover .tooltip-banner {
+  opacity: 1;
+}
+
+/* ↔️ TOOLTIP POSITIONERING */
+.tooltip-banner.left {
+  padding: 2px 6px;
+  top: 20%;
+  left: auto;
+  right: 160%;
+  transform: translateY(-50%);
+  transform-origin: right center;
+}
+
+.tooltip-banner.right {
+  padding: 2px 6px;
+  top: 20%;
+  left: 160%;
+  right: auto;
+  transform: translateY(-50%);
+  transform-origin: left center;
+}
+
+/* 🎯 PILAR – (avkommentera för att aktivera) */
+/*
+.tooltip-banner.left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -6px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #37415f;
+}
+
+.tooltip-banner.right::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -6px;
+  transform: translateY(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent transparent #37415f;
+}
+*/
+
+/* ==========================
+   ✨ ANIMATIONSKLASSER
+========================== */
+
+.fade-in {
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.entry-new {
+  animation: popNew 0.5s ease-in-out;
+  color: #b4f8c8;
+  font-weight: bold;
+  text-shadow: 0 0 4.5px lime;
+}
+
+.btn-glow {
+  box-shadow: 0 0 20px lime !important;
+  transform: scale(1.05);
+}
+
+.blink-total {
+  animation: blinkOut 0.4s ease-in-out;
+}
+
+/* ==========================
+   🪄 ANIMATIONER / KEYFRAMES
+========================== */
+
+@keyframes popNew {
+  0% {
+    transform: scale(1.3);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes blinkOut {
+  0% {
+    color: red;
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  50% {
+    color: #dcd3f8;
+    transform: scale(0.9);
+    opacity: 0.5;
+  }
+  100% {
+    color: red;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeRune {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+    text-shadow: none;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    text-shadow: 0 0 6px #6b21a8;
+  }
+}
+
+/* ==========================
+   📜 TEXTFADE I HERO
+========================== */
+
+.hero-subtitle,
+.hero-description {
+  animation: fadeRune 1s ease-out both;
+}
+
+.hero-description {
+  animation-delay: 0.4s;
+}
+
+/* ==========================
+   🖋️ MOBIL-ETIKETT
+========================== */
+
+.label-mobile {
+  display: none;
+}

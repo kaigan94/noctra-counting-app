@@ -1,0 +1,78 @@
+/* ==================================================
+   📦 LAYOUT & CONTAINERS
+   Struktur och placering av huvudboxar, dekorationer,
+   och positioneringselement i Noctra.
+================================================== */
+
+/* 🎛️ HUVUDCONTAINER */
+.container {
+  max-width: 800px;
+  width: 100%;
+  background: rgba(23, 19, 34, 0.6);
+  backdrop-filter: blur(3.2px);
+  -webkit-backdrop-filter: blur(3.2px);
+  border: 2px solid rgba(100, 130, 255, 0.35);
+  border-radius: 12px;
+  padding: 16px 12px 32px;
+  color: #dcd3f8;
+  box-shadow: 0 0 10px rgba(100, 130, 255, 0.5), inset 0 0 15px rgba(100, 130, 255, 0.2), 0 0 10px rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  position: relative;
+  top: -250px;
+  z-index: 3;
+}
+
+/* 🧾 ENTRIES – varje rad */
+.entry-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+/* 🧿 HÖRNDEKORATIONER */
+.corner-icon {
+  position: absolute;
+  width: 100px;
+  height: auto;
+  pointer-events: none;
+  z-index: 20;
+  filter: drop-shadow(0 0 12px rgba(130, 100, 255, 0.8));
+  opacity: 0.9;
+}
+
+/* 🎴 HÖRNPOSITIONER */
+.top-right-icon {
+  top: 0;
+  right: 0;
+  transform: translate(26.4%, -26.4%) rotate(90deg);
+}
+
+.top-left-icon {
+  top: 0;
+  left: 0;
+  transform: translate(-26.4%, -26.4%) rotate(360deg);
+}
+
+.bottom-right-icon {
+  bottom: 0;
+  right: 0;
+  transform: translate(26.4%, 26.4%) rotate(180deg);
+}
+
+.bottom-left-icon {
+  bottom: 0;
+  left: 0;
+  transform: translate(-26.4%, 26.4%) rotate(270deg);
+}
+
+/* 🧙‍♂️ IKON I ENTRIES RUBRIK */
+.entries-header i {
+  color: #b39dfc;
+  margin-top: 0.78rem;
+  margin-right: 0.08rem;
+  text-shadow: 0 0 6px #8da6ff;
+}

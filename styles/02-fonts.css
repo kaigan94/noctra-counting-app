@@ -1,0 +1,53 @@
+/* ==================================================
+   📜 MAGISKA FONTS – RUNSKRIFT & TITELSTILAR
+   Här definieras alla anpassade fonter som används
+   i Noctra. Se till att fontfilerna finns i ../fonts/.
+================================================== */
+
+/* ✴️ MAGICRUNES – används i huvudtiteln */
+@font-face {
+  font-family: "MagicRunes";
+  src: url("../fonts/DragonHunter-9Ynxj.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* ⚔️ DUNGEON DEPTHS – t.ex. rubriker & labels */
+@font-face {
+  font-family: "DungeonDepths";
+  src: url("../fonts/DungeonDepths-owJWV.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🔥 XAPHAN II – alternativ stil för dark UI */
+@font-face {
+  font-family: "XaphanII";
+  src: url("../fonts/XaphanIi-X3pq2.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🌀 GRADZY – experimentell dekorfont */
+@font-face {
+  font-family: "Gradzy";
+  src: url("../fonts/Gradzy-3lx13.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🩸 INFERNO – för demoniska rubriker */
+@font-face {
+  font-family: "Inferno";
+  src: url("../fonts/Inferno-L3nPD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 💜 PURPLE MAGIC – skript-liknande accentfont */
+@font-face {
+  font-family: "PurpleMagic";
+  src: url("../fonts/PurplemagicdemoSvg-x32mO.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,172 @@
+/* ==================================================
+   🔘 KNAPPAR – GRUNDTEMA & STIL
+   Här definieras grundstil, layout och olika
+   knappar för interaktion i appen.
+================================================== */
+
+/* 🔘 GRUNDSTIL FÖR ALLA KNAPPAR */
+button {
+  font-family: "Crimson Pro", serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+  background: none;
+  border: none;
+  position: relative;
+}
+
+button:hover {
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+  transform: scale(1.03);
+}
+
+button:disabled {
+  opacity: 0.5;
+  filter: grayscale(70%);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* 🔘 KNAPPGRUPP – RAD MED TRE HUVUDFUNKTIONER */
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+/* ==================================================
+   ➕ INCREMENT | 💾 SAVE | ➖ DECREMENT
+================================================== */
+
+#increment-btn,
+#save-btn,
+#decrement-btn {
+  font-family: "Crimson pro", serif;
+  border: 2px solid #dcd3f8;
+  color: #dcd3f8;
+  padding: 10px 22px;
+  border-radius: 8px;
+  text-shadow: 0 0 4px #dcd3f8;
+  transition: all 0.3s ease;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+/* ➕ INCREMENT */
+#increment-btn {
+  background: linear-gradient(to right, #2e0d55, #1d1a6b);
+  box-shadow: 0 0 10px #4b1695;
+}
+
+#increment-btn:hover {
+  background: linear-gradient(to right, #4b1695, #2e155a);
+  box-shadow: 0 0 8px #d4af37; /* mildare guld */
+}
+
+/* 💾 SAVE */
+#save-btn {
+  background: linear-gradient(to right, #0f3d1e, #155d32);
+  box-shadow: 0 0 10px #155d32;
+}
+
+#save-btn:hover {
+  background: linear-gradient(to right, #155d32, #1e7744);
+  box-shadow: 0 0 8px #7cfc00; /* limegrönt men inte neongrönt */
+}
+
+/* ➖ DECREMENT */
+#decrement-btn {
+  background: linear-gradient(to right, #260542, #521e6b);
+  box-shadow: 0 0 10px #521e6b;
+}
+
+#decrement-btn:hover {
+  background: linear-gradient(to right, #521e6b, #6e2b8f);
+  box-shadow: 0 0 8px #ce8fff; /* ljuslila glow */
+}
+
+/* ==================================================
+   🧼 RESET & 📤 EXPORT (ikoner uppe till höger/vänster)
+================================================== */
+
+#reset-btn,
+#export-btn {
+  position: absolute;
+  top: 5px;
+  background: none;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  z-index: 25;
+  box-shadow: none;
+}
+
+#reset-btn {
+  top: 24px;
+  right: 50px;
+}
+
+#export-btn {
+  top: 24px;
+  left: 50px;
+}
+
+/* 🖼️ IKONSTIL FÖR RESET/EXPORT */
+#reset-btn img,
+#export-btn img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+/* RESET */
+#reset-btn img {
+  filter: drop-shadow(0 0 8px #4a0000);
+}
+
+#reset-btn img:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 6px #ff3c3c);
+}
+
+/* EXPORT */
+#export-btn img {
+  filter: drop-shadow(0 0 8px #1b255f);
+}
+
+#export-btn img:hover {
+  transform: scale(1.5);
+  filter: drop-shadow(0 0 6px #54a0ff);
+}
+
+/* ==================================================
+   ⏪ REMOVE TOTAL-BUTTON (under total)
+================================================== */
+
+#remove-total-btn {
+  font-family: "Crimson Pro", serif;
+  background: linear-gradient(to right, #1f1f2b, #2d2d3a);
+  border: 2px solid #7a88a6;
+  color: #e0e7ff;
+  padding: 6px 18px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px rgba(122, 136, 166, 0.3);
+  text-shadow: 0 0 4px #aabbff;
+  transition: all 0.3s ease;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#remove-total-btn:hover {
+  background: linear-gradient(to right, #37415f, #2a324d);
+  box-shadow: 0 0 8px #8da6ff;
+  transform: scale(1.06);
+}

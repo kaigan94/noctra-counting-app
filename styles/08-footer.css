@@ -1,0 +1,24 @@
+/* ==================================================
+   📝 FOOTER & SISTARAD
+   Visar copyright och senaste uppdatering
+================================================== */
+
+/* 🕒 TIDSTÄMPEL – visas under totalen */
+#last-updated {
+  font-family: "Crimson Pro", serif;
+  font-size: 0.9rem;
+  color: #dcd3f8;
+  text-shadow: 0 0 0 black;
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+
+/* ⚖️ COPYRIGHT TEXT */
+#footer-copy {
+  text-align: center;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  padding: 0;
+  color: #7e70b5;
+}

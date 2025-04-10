@@ -1,0 +1,94 @@
+/* ==================================================
+   📌 TYPOGRAFI & TEXTER
+   Rubriker, siffror, sparade entries & totals.
+================================================== */
+
+/* 🧠 RUBRIK H1 – Används sällan utanför Hero */
+h1 {
+  font-family: "MagicRunes", serif;
+  font-size: clamp(1.2rem, 5vw, 2.2rem);
+  color: #dcd3f8;
+  letter-spacing: 2px;
+  text-shadow: 0 0 16px #6b21a8, 0 0 16px #5b179d;
+  animation: subtleGlow 3.5s ease-in-out infinite;
+  padding: auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* 🔢 RUBRIK H2 – Huvudräknare */
+h2 {
+  font-family: "Crimson Pro", serif;
+  font-size: clamp(2.4rem, 5vw, 2.4rem);
+  margin-top: 30px;
+  margin-bottom: 12px;
+  color: #dcd3f8;
+  letter-spacing: 1px;
+  text-shadow: 0 0 16px #6b21a8, 0 0 16px #5b179d;
+}
+
+/* 📄 TEXTBLOCK – Sparade och Total-sektion */
+#save-el,
+#total-el {
+  font-family: "Crimson Pro", serif;
+  text-shadow: 0 0 10px #0d0b1d;
+  color: #dcd3f8;
+}
+
+/* 🧾 SPARADE RUBRIK */
+#save-el {
+  font-size: 1.6rem;
+  margin-top: -4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/* 💯 TOTALINFO */
+#total-el {
+  font-size: 1.38rem;
+  margin: 0;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* 📘 "Previous Entries" rubrik med ikon */
+.save-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  justify-content: center;
+}
+
+/* 📋 LISTAN MED SPARADE SIFFROR */
+#entries-list {
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* 🧮 TOTALRÄKNARE + "Remove One"-knapp layout */
+#total-wrapper {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  padding: 8px;
+  margin-top: 2rem;
+  max-width: fit-content;
+  flex-direction: column;
+}
+
+/* ⚡ HUVUDSIFFRAN (COUNT) */
+#count-el {
+  font-size: 3rem;
+  color: #cfd0ff;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-shadow: 0 0 10px rgba(141, 166, 255, 0.6), 0 0 20px rgba(141, 166, 255, 0.4), 0 0 35px #6b21a8;
+  animation: electricGlow 1.8s infinite alternate;
+}

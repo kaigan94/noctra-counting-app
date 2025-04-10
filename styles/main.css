@@ -1,0 +1,31 @@
+/* ==================================================
+   🎨 MAIN.CSS – HUVUDPORTALEN FÖR ALL STILMAGI
+   Laddar in alla CSS-moduler i rätt sekvens
+================================================== */
+
+/* 🌑 Basstruktur, flex, bakgrund, scroll */
+@import url("01-global.css");
+
+/* 📜 Typsnitt – Runskrift & magiska fonter */
+@import url("02-fonts.css");
+
+/* 📦 Layout, containers & dekorelement */
+@import url("03-layout.css");
+
+/* 🌌 Hero – Titel, tagline, divider & intro */
+@import url("04-hero.css");
+
+/* 📝 Typografi – H1, H2, textblock, siffror */
+@import url("05-typography.css");
+
+/* 🔘 Knappar – Increment, Save, Decrement etc */
+@import url("06-buttons.css");
+
+/* ✨ Effekter & animationer – tooltips, glow etc */
+@import url("07-animations.css");
+
+/* 📄 Footer – Last updated & copyright */
+@import url("08-footer.css");
+
+/* 📱 Mobilanpassning – responsive layout */
+@import url("09-responsive.css");

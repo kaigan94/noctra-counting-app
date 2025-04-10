@@ -1,0 +1,101 @@
+/* ==================================================
+   🌌 HERO BANNER – TITEL & INTROSEKTION
+   Hanterar titel, tagline, blur-overlay och dekoration
+================================================== */
+
+/* 🪟 HERO-CONTAINER */
+.hero-banner {
+  width: 100%;
+  position: relative; /* 🧱 viktigt för overlay & layout */
+  z-index: 20;
+
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  box-shadow: 0 6px 26px rgba(0, 0, 0, 0.6);
+}
+
+/* 🕳️ SPACER UNDER HERON */
+.hero-spacer {
+  height: 300px;
+  flex-shrink: 0;
+}
+
+/* 🧊 BLUR & GRADIENT-OVERLAY */
+.hero-overlay {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 16px 16px 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent);
+  backdrop-filter: blur(8px);
+}
+
+/* ✴️ TITEL */
+.hero-title {
+  font-family: "MagicRunes";
+  font-size: clamp(3.4rem, 6.2vw, 4.6rem);
+  color: #dcd3f8;
+  text-shadow: 0 0 20px #6b21a8, 0 0 30px #5b179d;
+  margin-bottom: 0.8rem;
+}
+
+/* 🕯️ SUBTITLE (tagline) */
+.hero-subtitle {
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.05rem;
+  color: #e9ddff;
+  text-shadow: 0 0 4px #7e4ce4;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+/* 🎴 VISUELL DELARE (mellan subtitle & description) */
+.hero-divider {
+  width: 400px;
+  height: 2px;
+  margin: 0 auto 1.3rem;
+  background: linear-gradient(to right, #8b5cf6, #c084fc);
+  box-shadow: 0 0 10px #c084fc;
+  border-radius: 2px;
+}
+
+/* 📜 BESKRIVNINGSTEXT */
+.hero-description {
+  font-family: "EB Garamond", serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #dcd3f8;
+  opacity: 0.85;
+  letter-spacing: 0.4px;
+  margin: 0 auto;
+  margin-bottom: 1.2rem;
+  text-shadow: 0 0 4px #422060;
+}
+
+/* 🧷 .TXT-DELEN I BESKRIVNINGEN */
+.dot-txt {
+  color: #e2d9ff;
+  font-weight: 500;
+  text-shadow: 0 0 2px #a378ff;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  vertical-align: middle;
+}
+
+/* 📜 INBÄDDAD IKON I TXT-DELEN */
+.inline-icon {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+  filter: drop-shadow(0 0 2px #422060);
+}
