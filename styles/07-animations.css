@@ -1,10 +1,10 @@
 /* ==================================================
-   🛠️ EFFEKTER & ANIMATIONER
+   EFFEKTER & ANIMATIONER
    Tooltips, glow-effekter, fade-ins och nyckelrörelser
 ================================================== */
 
 /* ==========================
-   🎯 TOOLTIP – Knappinfo
+   TOOLTIP – Knappinfo
 ========================== */
 
 .tooltip-text {
@@ -32,7 +32,7 @@ button:disabled:hover .tooltip-text {
   opacity: 1;
 }
 
-/* 🧊 TOOLTIP WRAPPER & BANNERS */
+/* TOOLTIP WRAPPER & BANNERS */
 .tooltip-wrapper {
   position: relative;
   display: inline-block;
@@ -61,7 +61,7 @@ button:disabled:hover .tooltip-text {
   opacity: 1;
 }
 
-/* ↔️ TOOLTIP POSITIONERING */
+/* TOOLTIP POSITIONERING */
 .tooltip-banner.left {
   padding: 2px 6px;
   top: 20%;
@@ -80,7 +80,7 @@ button:disabled:hover .tooltip-text {
   transform-origin: left center;
 }
 
-/* 🎯 PILAR – (avkommentera för att aktivera) */
+/* PILAR */
 /*
 .tooltip-banner.left::after {
   content: "";
@@ -106,7 +106,7 @@ button:disabled:hover .tooltip-text {
 */
 
 /* ==========================
-   ✨ ANIMATIONSKLASSER
+   ANIMATIONSKLASSER
 ========================== */
 
 .fade-in {
@@ -130,7 +130,7 @@ button:disabled:hover .tooltip-text {
 }
 
 /* ==========================
-   🪄 ANIMATIONER / KEYFRAMES
+   ANIMATIONER / KEYFRAMES
 ========================== */
 
 @keyframes popNew {
@@ -179,7 +179,7 @@ button:disabled:hover .tooltip-text {
 }
 
 /* ==========================
-   📜 TEXTFADE I HERO
+   TEXTFADE I HERO
 ========================== */
 
 .hero-subtitle,
@@ -192,7 +192,7 @@ button:disabled:hover .tooltip-text {
 }
 
 /* ==========================
-   🖋️ MOBIL-ETIKETT
+   MOBIL-ETIKETT
 ========================== */
 
 .label-mobile {

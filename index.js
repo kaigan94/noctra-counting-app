@@ -1,5 +1,5 @@
 // ====================
-// 🚀 INITIALIZING & ELEMENT
+// INITIALIZING & ELEMENT
 // ====================
 const countEl = document.getElementById("count-el");
 const saveEl = document.getElementById("save-el");
@@ -13,7 +13,7 @@ function updateButtonStates() {
 }
 
 // ====================
-// ✨ UTILITY FUNCTIONS
+// UTILITY FUNCTIONS
 // ====================
 function animateOnce(element, className, duration = 300) {
   element.classList.add(className);
@@ -40,7 +40,7 @@ function showInfoBanner(message) {
 }
 
 // ====================
-// ➕ INCREMENT BUTTON FUNKTION
+// INCREMENT BUTTON FUNKTION
 // ====================
 function increment() {
   count += 1;
@@ -50,7 +50,7 @@ function increment() {
 }
 
 // ====================
-// ➖ DECREMENT BUTTON FUNKTION
+// DECREMENT BUTTON FUNKTION
 // ====================
 function decrement() {
   if (count > 0) {
@@ -62,7 +62,7 @@ function decrement() {
 }
 
 // ====================
-// 💾 SAVE BUTTON FUNKTION
+// SAVE BUTTON FUNKTION
 // ====================
 function save() {
   if (typeof count !== "number" || isNaN(count) || count <= 0) return;
@@ -82,7 +82,7 @@ function save() {
 }
 
 // ====================
-// ❌ ÅTERSTÄLL ALLT FUNKTION
+// RESET FUNKTION
 // ====================
 function reset() {
   if (!localStorage.getItem("savedEntries")) {
@@ -105,7 +105,7 @@ function reset() {
 }
 
 // ====================
-// 📤 EXPORTERA DATA
+// EXPORTERA DATA
 // ====================
 function exportData() {
   const savedData = localStorage.getItem("savedEntries");
@@ -144,7 +144,7 @@ function exportData() {
 }
 
 // ====================
-// 📊 UPPDATERA STATISTIK
+// UPPDATERA STATISTIK
 // ====================
 function updateStats() {
   const savedData = localStorage.getItem("savedEntries") || "";
@@ -197,7 +197,7 @@ function updateStats() {
 }
 
 // ====================
-// ⏪ TA BORT 1 FRÅN TOTAL
+// TA BORT 1 FRÅN TOTAL
 // ====================
 function removeFromTotal() {
   const savedData = localStorage.getItem("savedEntries");
@@ -231,7 +231,7 @@ function removeFromTotal() {
 }
 
 // ====================
-// 📦 LADDNING AV SIDAN
+// LADDNING AV SIDAN
 // ====================
 document.addEventListener("DOMContentLoaded", () => {
   updateStats();

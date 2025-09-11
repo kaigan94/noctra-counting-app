@@ -10,6 +10,7 @@
   src: url("../fonts/DragonHunter-9Ynxj.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* ⚔️ DUNGEON DEPTHS – t.ex. rubriker & labels */
@@ -18,6 +19,7 @@
   src: url("../fonts/DungeonDepths-owJWV.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* 🔥 XAPHAN II – alternativ stil för dark UI */
@@ -26,6 +28,7 @@
   src: url("../fonts/XaphanIi-X3pq2.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* 🌀 GRADZY – experimentell dekorfont */
@@ -34,6 +37,7 @@
   src: url("../fonts/Gradzy-3lx13.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* 🩸 INFERNO – för demoniska rubriker */
@@ -42,6 +46,7 @@
   src: url("../fonts/Inferno-L3nPD.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 /* 💜 PURPLE MAGIC – skript-liknande accentfont */
@@ -50,4 +55,5 @@
   src: url("../fonts/PurplemagicdemoSvg-x32mO.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
