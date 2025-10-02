@@ -20,7 +20,7 @@ body {
 body {
   height: auto;
   cursor: url("/images/purple-dagger.cur"), auto;
-  background-image: url("/images/noctra-background.png");
+  background-image: url("/images/noctra-mobile-bg.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;

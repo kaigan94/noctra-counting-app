@@ -6,7 +6,7 @@
 @media (max-width: 768px) {
   /* 📱 Body & bakgrund */
   body {
-    background-image: url("/images/noctra-mobile-bg.png");
+    background-image: url("/images/noctra-mobile-bg.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
